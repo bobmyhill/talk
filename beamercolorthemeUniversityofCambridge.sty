@@ -1,0 +1,79 @@
+% Copyright 2011 by Bob Myhill
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+
+\mode<presentation>
+
+
+% =========================================================================
+% University of Cambridge colour scheme
+% Lighter palette
+\definecolor{lucblue}{RGB}{106,173,228}
+\definecolor{lucorange}{RGB}{239,189,71}
+\definecolor{lucgreen}{RGB}{168,180,0}
+\definecolor{lucpurple}{RGB}{181,147,155}
+\definecolor{luccamblue}{RGB}{163,193,173}
+
+% Core palette
+\definecolor{cucblue}{RGB}{0,115,207}
+\definecolor{cucorange}{RGB}{227,114,34}
+\definecolor{cucgreen}{RGB}{88,166,24}
+\definecolor{cucpurple}{RGB}{142,37,141}
+\definecolor{cuccamblue}{RGB}{0,179,190}
+
+% Darker palette
+\definecolor{ducblue}{RGB}{0,62,114}
+\definecolor{ducorange}{RGB}{200,78,0}
+\definecolor{ducgreen}{RGB}{67,81,37}
+\definecolor{ducpurple}{RGB}{65,45,93}
+\definecolor{duccamblue}{RGB}{21,101,112}
+
+% =========================================================================
+
+
+\ifbeamer@dark%
+
+  \setbeamercolor{structure}{fg=white}%
+  \setbeamercolor{normal text}{fg=white}%
+  \setbeamercolor{frametitle}{fg=white}%
+
+\else%
+
+  \setbeamercolor{structure}{fg=ducblue}%
+  \setbeamercolor{normal text}{fg=ducblue}%
+  \setbeamercolor{frametitle}{fg=ducblue}%
+
+  \setbeamercolor{frame number in foot}{fg=white}%
+
+  \ifbeamer@darktitle%
+      \setbeamercolor{title}{fg=white}%
+      \setbeamercolor{subtitle}{fg=white}%
+  \else
+      \setbeamercolor{subtitle}{fg=duccamblue}%
+  \fi
+
+\fi
+
+
+% =======================================================================
+% alert color
+\setbeamercolor{alerted text}{fg=white}
+% =======================================================================
+
+% =======================================================================
+% blocks
+\setbeamercolor{block title}{use=structure,fg=white,bg=ducblue}
+\setbeamercolor{block title alerted}{use=alerted text,fg=white,bg=luccamblue}
+\setbeamercolor{block title example}{use=example text,fg=white,bg=ducblue}
+
+\setbeamercolor{block body}        {fg=ducblue,use=block title,bg=lucblue}
+\setbeamercolor{block body alerted}{fg=ducblue,use=block title alerted,bg=lucpurple}
+\setbeamercolor{block body example}{fg=ducblue,use=block title example,bg=lucblue}
+% =======================================================================
+
+
+\mode
+<all>

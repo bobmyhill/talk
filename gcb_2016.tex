@@ -1,0 +1,281 @@
+\documentclass[compress,framenumber]{beamer}
+
+\usetheme{UniversityofCambridge}
+
+\usepackage{lipsum}
+\usepackage{natbib}
+\newcommand{\nat}{Nature}
+\newcommand{\grl}{Geophysical Research Letters}
+\newcommand{\gji}{Geophysical Journal International}
+\newcommand{\jgr}{Journal of Geophysical Research (Solid Earth)}
+\newcommand{\pepi}{Physics of the Earth and Planetary Interiors}
+\newcommand{\epsl}{Earth and Planetary Science Letters}
+\newcommand{\gca}{Geochimica et Cosmochimica Acta}
+\newcommand{\cmp}{Contributions to Mineralogy and Petrology}
+\newcommand{\bssa}{Bulletin of the Seismological Society of America}
+\newcommand{\toms}{ACM Transactions on Mathematical Software}
+\setbeamertemplate{bibliography item}[triangle]
+
+\title{Marsquakes: A key to the structure and history of Mars' deep interior
+\\$\,$}
+\subtitle{GCB, May 11\textsuperscript{th} 2016}
+
+\author{\hfill{Bob Myhill, Nick Teanby, James Wookey}} 
+\begin{document}
+
+% Title page
+\begin{frame} 
+\titlepage
+\vspace{-1.0em}
+\end{frame}
+
+
+\section{Introduction}
+% Motivation
+
+\begin{frame}
+  \frametitle{Mars: What do we know?}
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.75\linewidth]{figures/mars_earth_comparison.pdf}
+  \end{figure}
+
+\center{$\bar{R}$, $M = \int_V \rho dv $, $\bar{I} = \int_M r^2 dm$}
+\end{frame}
+
+\begin{frame}
+  \frametitle{What do we know? Surface chemistry}
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=1.00\linewidth]{figures/mars_composition.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{What do we know? Shallow chemistry}
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.85\linewidth]{figures/snc_meteorites.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{What do we want to know? Interior chemistry}
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.85\linewidth]{figures/earth_section.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{What do we want to know? Early history}
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.65\linewidth]{figures/impact.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{What do we want to know? Planetary evolution}
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=1.0\linewidth]{figures/MOLA_hi_res.pdf}
+  \end{figure}
+\end{frame}
+
+\section{The InSight Mission}
+
+\begin{frame}
+  \frametitle{How do we find this stuff out?}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Faults on Mars}
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.95\linewidth]{figures/fault_map.pdf}
+  \end{figure}
+\vspace{-1.0em}
+\hfill Knapmeyer et al., 2006
+\end{frame}
+
+\begin{frame}
+  \frametitle{Dykes on Earth}
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.95\linewidth]{figures/mackenzie_dyke_swarm}
+  \end{figure}
+\vspace{-1.0em}
+\hfill LeCheminant and Heaman, 1989
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Impacts on Mars}
+
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.8\linewidth]{figures/mars_impact_2010_2012.pdf}
+  \end{figure}
+
+\hfill \copyright NASA/JPL-Caltech/Univ. of Arizona
+\end{frame}
+
+\begin{frame}
+  \frametitle{Previous missions}
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=1.00\linewidth]{figures/viking_composite.pdf}
+  \end{figure}
+\vspace{-1.0em}
+\hfill Anderson, 1977
+\end{frame}
+
+\begin{frame}
+  \frametitle{The InSight Mission}
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.7\linewidth]{figures/insight_lander.pdf}
+  \end{figure}
+\hfill \copyright NASA/JPL-Caltech/Univ. of Arizona
+\end{frame}
+
+
+
+
+\section{Current work}
+
+
+\begin{frame}
+  \frametitle{Preparing for the mission}
+  Few events? Small? Unknown locations?
+\end{frame}
+
+\begin{frame}
+  \frametitle{Building a synthetic Mars}
+
+  \vspace{1.0em}
+  Step 1: Choose a basic crustal structure
+  \vspace{-1.0em}
+  \begin{figure}
+    \includegraphics[width=0.75\linewidth]{figures/crust.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Building a synthetic Mars}
+
+  Step 2: Choose a composition and temperature gradient, find equilibrium density
+  \vspace{-1.0em}
+  \begin{figure}
+    \includegraphics[width=0.7\linewidth]{figures/P_T_rho.pdf}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Building a synthetic Mars}
+  Step 3: Build a planet with a core radius and density that fits
+  Mars' mass and moment of inertia
+  \vspace{-0.5em}
+  \begin{figure}
+    \includegraphics[width=0.7\linewidth]{figures/example_profile.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Building a synthetic Mars}
+  Step 4: Add life \\(optional)
+  \vspace{-0.5em}
+  \begin{figure}
+    \includegraphics[width=0.7\linewidth]{figures/example_profile_with_life.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Core properties}
+  \begin{figure}
+    \includegraphics[width=0.65\linewidth]{figures/cmb_pressures_1673.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Making synthetic seismograms}
+  Record section
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.65\linewidth]{figures/mars.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Weird and wonderful raypaths}
+  Cross section
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.65\linewidth]{figures/mars.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Weird and wonderful raypaths}
+  Causes of raypaths
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.65\linewidth]{figures/mars.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Constraining composition and temperature}
+  S-P, PP-P
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.65\linewidth]{figures/mars.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Constraining core size without core phases?}
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.65\linewidth]{figures/mars.pdf}
+  \end{figure}
+\end{frame}
+
+\section{Future work}
+\begin{frame}
+  \frametitle{Future work}
+  Adding ferric iron and sulphur
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.65\linewidth]{figures/mars.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Future work}
+  Core differentiation
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.65\linewidth]{figures/mars.pdf}
+  \end{figure}
+\end{frame}
+
+% Thanks
+\begin{frame}
+  \frametitle{You survived!}
+  \vspace{-2.0em}
+  \begin{figure}
+    \includegraphics[width=0.75\linewidth]{figures/the_martian.pdf} 
+  \end{figure}
+   \center{Any questions?}
+  %\vspace{-0.5em}
+%\small{Thanks also to our stellar technicians at the BGI: Gerti Gollner, Stefan \"Ubelhack, Heinz Fischer, Hubert Schulze, Raphael Njul and Detlef Krau{\ss}e.}
+\end{frame}
+
+
+
+
+\end{document}
